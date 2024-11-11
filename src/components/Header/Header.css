@@ -1,0 +1,16 @@
+.header_principal h2 {
+font-family:'Trebuchet MS', Verdana;
+    font-size: 35px;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    padding-bottom: 25px;
+
+}
+
+.header_principal p {
+    display: flex;
+    font-family: 'Trebuchet MS', Verdana;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 25px;
+}

@@ -2,7 +2,7 @@
 
 const CardWidget = () => {
   return (
-    <a className="nav-link" href="#">
+    <a style={{display:"flex", position:"absolute", right:0}}href="#">
         <span>99</span>
 <svg
         xmlns="http://www.w3.org/2000/svg"

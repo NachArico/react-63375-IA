@@ -2,36 +2,36 @@ const crypto = [
     {
         "id": 1,
         "nombre": "bitcoin",
-        "precio": 35000,
-        "cantidad": 0.5,
+        "precio": 95000,
+        "categoria": "volatil",
         "imagen": "https://cryptologos.cc/logos/bitcoin-btc-logo.png"
       },
       {
         "id": 2,
         "nombre": "ethereum",
         "precio": 2000,
-        "cantidad": 1.2,
+        "categoria": "volatil",
         "imagen": "https://cryptologos.cc/logos/ethereum-eth-logo.png"
       },
       {
         "id": 3,
-        "nombre": "ripple",
-        "precio": 0.45,
-        "cantidad": 1000,
-        "imagen": "https://cryptologos.cc/logos/ripple-xrp-logo.png"
+        "nombre": "USDT",
+        "precio": 1,
+        "categoria": "stable",
+        "imagen": "https://cryptologos.cc/logos/tether-usdt-logo.png?v=040"
       },
       {
         "id": 4,
-        "nombre": "litecoin",
-        "precio": 150,
-        "cantidad": 10,
-        "imagen": "https://cryptologos.cc/logos/litecoin-ltc-logo.png"
+        "nombre": "USDC",
+        "precio": 1,
+        "categoria": "stable",
+        "imagen": "https://cryptologos.cc/logos/usd-coin-usdc-logo.png?v=040"
       },
       {
         "id": 5,
         "nombre": "cardano",
         "precio": 1.2,
-        "cantidad": 500,
+        "categoria": "volatil",
         "imagen": "https://cryptologos.cc/logos/cardano-ada-logo.png"
       }
 ]
@@ -39,6 +39,20 @@ export const getCrypto = () => {
     return new Promise((resolve) => {
         setTimeout (()=> {
             resolve (crypto)
-        },1000)
+        },1)
     })
+}
+export const getCryptobyCategory = (id) => {
+  return new Promise((resolve) => {
+      setTimeout (()=> {
+          resolve (crypto.filter(c=>c.categoria===id))
+      },1)
+  })
+}
+export const getCryptobyID = (id) => {
+  return new Promise((resolve) => {
+      setTimeout (()=> {
+          resolve (crypto.filter(c=>c.id==id))
+      },1)
+  })
 }

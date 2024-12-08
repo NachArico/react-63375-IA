@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CryptoItem from './CryptoItem'
+
 
 function CryptoList({product}) {
   return (
-    <div>
+    <div className = "containerCryptos">
         {product.map((prod) => {
             return (
                 <CryptoItem key={prod.id} item={prod}/>

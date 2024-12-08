@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom"
 import CardWidget from "../CardWidget/CardWidget"
-import "./NavBar.css"
 
 function NavBar() {
   return (
     <nav className="navbar">
-      <ul>
+      <ul className="menu">
         <li><Link to="/">BatCaveCrpyto</Link></li>
-        <li><Link to="Tiendas">Tiendas y cajeros</Link></li>
-        <li><Link to="Franquicias">Franquicias</Link></li>
-        <li><Link to="Exchange">Exchange</Link></li>
-        <li><Link to="Token">BCC Token</Link></li>
-        <li><Link to="Activos">Activos</Link></li>
+        {/* <li><Link to="/Category/Exchange">Exchange</Link></li> */}
+        <li><Link to="/Category/cryptos">Cryptos</Link></li>
+        <li><Link to="/Category/stable">Stable</Link></li>
+        <li><Link to="/Category/volatil">Volátil</Link></li>
       </ul>
       <CardWidget />
     </nav>
